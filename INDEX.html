@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwin Praveen - Portfolio Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    header {
+      background: #005288;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 1rem;
+    }
+    nav {
+      background: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #005288;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #005288;
+      border-bottom: 2px solid #005288;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
+    }
+    .timeline {
+      display: flex;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    .timeline > div {
+      min-width: 300px;
+      background: #fff;
+      border-left: 5px solid #005288;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .skills ul, .hobbies ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills ul li, .hobbies ul li {
+      margin: 0.5rem 0;
+    }
+    .progress-bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0.5rem 0;
+    }
+    .progress-bar-fill {
+      display: block;
+      height: 20px;
+      background: #005288;
+      text-align: right;
+      padding-right: 0.5rem;
+      color: white;
+      line-height: 20px;
+      font-size: 0.8rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #005288;
+      color: white;
+    }
+    .download {
+      display: inline-block;
+      background: white;
+      color: #005288;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile-pic.jpg" alt="Ashwin Praveen">
+    <h1>Ashwin Praveen</h1>
+    <p>Business Development Professional | Green Hydrogen & Electrochemistry</p>
+    <p>Email: ashwinpraveen98@gmail.com | <a href="https://www.linkedin.com/in/ashwin-praveen/" target="_blank" style="color:white; text-decoration:underline;">LinkedIn</a></p>
+  </header>
+
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#languages">Languages</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
+
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <p>Proactive Business Development Professional with deep electrochemical expertise in batteries and Green Hydrogen. Proven track record in driving growth, market expansion, and strategic partnerships. Combines technical knowledge with business and marketing acumen to exceed targets and deliver innovative, customer-focused solutions.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience Timeline</h2>
+    <div class="timeline">
+      <div>
+        <h3>BGR Tech Ltd.</h3>
+        <p><strong>Business Development Engineer</strong></p>
+        <ul>
+          <li>Resolved technical challenges in electrolyzers and storage systems</li>
+          <li>Performed market analysis for green hydrogen opportunities</li>
+          <li>Generated leads through targeted outreach and negotiation</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Associated Electrochemicals Pvt. Ltd.</h3>
+        <p><strong>Technical Sales Engineer</strong></p>
+        <ul>
+          <li>Primary liaison for 100+ clients</li>
+          <li>Delivered technical demos and trained clients</li>
+          <li>Managed product demand data and marketing strategies</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech - Chemical and Electrochemical Engineering</strong></p>
+    <p>CSIR-Central Electrochemical Research Institute, Karaikudi, Tamil Nadu</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Electrochemistry</li>
+      <li>Market Research</li>
+      <li>Microsoft Office</li>
+      <li>Stakeholder Management</li>
+      <li>Project Management</li>
+    </ul>
+  </section>
+
+  <section id="languages">
+    <h2>Language Proficiency</h2>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 100%;">English - Fluent</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 95%;">Hindi - Fluent</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 90%;">Tamil - Fluent</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 80%;">Malayalam - Conversational</span></div>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Table Tennis, Basketball, Cricket, Snooker</li>
+      <li>Photography & Content Creation</li>
+      <li>Podcasting, Stand-up Comedy</li>
+      <li>Travelling</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Download full PDF: <a class="download" href="Ashwin_Resume.pdf" download>Click here</a></p>
+    <p>&copy; 2025 Ashwin Praveen</p>
+  </footer>
+</body>
+</html>
