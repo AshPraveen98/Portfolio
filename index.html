@@ -2,237 +2,233 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Levelized Cost of Hydrogen (LCOH) Comparison</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashwin Praveen - Portfolio Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f9;
-      padding: 20px;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f8;
+      color: #333;
+    }
+    a {
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+    header {
+      background: #016685;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+      margin-bottom: 1rem;
+    }  
+    nav {
+      background: #fff;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #016685;
+      font-weight: bold;
+    }
+    section {
+      padding: 4rem 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    header {
-      background-color: turquoise;
-      padding: 20px;
-      text-align: center;
+    h2 {
+      color: #016685;
+      border-bottom: 2px solid #016685;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem;
     }
-    header h1 {
-      color: white;
-      font-size: 2em;
-      margin: 0;
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      overflow-x: auto;
+      gap: 2rem;
+      padding: 1rem 0;
     }
-    header .copyright {
-      color: white;
-      font-size: 0.9em;
+    .timeline > div {
+      min-width: 300px;
+      background: #fff;
+      border-left: 5px solid #016685;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .system-section {
-      background: white;
-      padding: 15px;
-      margin: 20px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .system-title {
-      text-align: center;
-      font-weight: bold;
+    .timeline ul li {
       margin-bottom: 10px;
     }
-    .input-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 15px;
+    .skills ul, .hobbies ul {
+      list-style: none;
+      margin-bottom: 10px;
     }
-    .input-group {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+    .progress-bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0.5rem 0;
     }
-    label {
-      flex: 0 0 40%;
+    .progress-bar-fill {
+      display: block;
+      height: 30px;
+      background: #016685;
       text-align: right;
-      padding-right: 10px;
-    }
-    input, select {
-      flex: 1;
-      padding: 5px;
-      min-width: 100px;
-    }
-    button {
-      background-color: #28a745;
+      padding-right: 0.5rem;
       color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      margin: 10px auto;
-      display: block;
+      line-height: 30px;
+      font-size: 0.8rem;
     }
-    button:hover {
-      background-color: #218838;
+    footer {
+      text-align: center;
+      padding: 3rem;
+      background: #016685;
+      color: white;
     }
-    .result {
-      background: #fff;
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-top: 20px;
-      text-align: left;
-      white-space: pre-wrap;
-      font-family: monospace;
-    }
-    canvas {
-      max-width: 70%;
-      margin: 30px auto 0;
-      display: block;
+    .download {
+      display: inline-block;
+      background: white;
+      color: #016685;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Levelized Cost of Hydrogen (LCOH) Comparison</h1>
-    <div class="copyright">&copy; Ashwin Praveen</div>
-  </header>
+ <header>
+    <img src="profile pic.jpg">
+    <h1>ASHWIN PRAVEEN</h1>
+    <p>Business Development Professional | Green Hydrogen & Electrochemistry</p>   
+    <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem;">
+  <a href="mailto:careers.ashwinpraveen@outlook.com" title="Email" style="color: white; font-size: 1.5rem;">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <a href="https://www.linkedin.com/in/ashwin-praveen/" target="_blank" title="LinkedIn" style="color: white; font-size: 1.5rem;">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://wa.me/919487414225" target="_blank" title="WhatsApp" style="color: white; font-size: 1.5rem;">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</div>   
+ </header>
 
-  <div id="systemsContainer"></div>
+  <nav>
+    <a href="#summary">Summary</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#languages">Languages</a>
+    <a href="#hobbies">Hobbies</a>
+  </nav>
 
-  <script>
-    const systems = ['A', 'B'];
-    const currencySymbol = '$';
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <p style="text-align:justify;">I am a proactive Business Development Professional with over four years of experience in the renewable energy sector, specializing in electrochemical technologies, batteries, and green hydrogen. My unique blend of technical proficiency and business acumen has consistently driven growth, market expansion, and the formation of strategic partnerships.</p>
 
-    const fields = [
-      ['plantSize', 'Plant Size (MW)'],
-      ['annualOutput', 'Hydrogen Output (tons/year)'],
-      ['capexElectrolyzer', 'CAPEX - Electrolyzer ($/kW)'],
-      ['capexBOP', 'CAPEX - BOP ($/kW)'],
-      ['capexCivil', 'CAPEX - Civil ($/kW)'],
-      ['capexInstallation', 'CAPEX - Installation ($/kW)'],
-      ['stackReplacement', 'Stack Replacement (% of CAPEX)'],
-      ['replacementFrequency', 'Replacement Frequency (years)'],
-      ['electricity', 'Electricity Price ($/MWh)'],
-      ['efficiency', 'Efficiency (%)'],
-      ['fullLoad', 'Full Load Hours (hours/year)'],
-      ['lifetime', 'System Lifetime (years)'],
-      ['discountRate', 'Discount Rate (%)'],
-      ['o2Revenue', 'O₂ Revenue ($/kg H₂)'],
-      ['waterCost', 'Water Cost ($/m³)'],
-      ['waterConsumption', 'Water Consumption (L/kg H₂)'],
-      ['co2Price', 'CO₂ Credit ($/kg H₂)'],
-      ['additionalRevenue', 'Other Revenue ($/kg H₂)'],
-      ['compressionCost', 'Compression Cost ($/kg H₂)'],
-      ['opex', 'Operational Expenditure (OPEX) ($/kg H₂)'],
-      ['h2Price', 'Hydrogen Selling Price ($/kg H₂)']
-    ];
+    <p style="text-align:justify;">My career is marked by a proven track record of exceeding targets and delivering innovative, customer-focused solutions. I have successfully led initiatives that resulted in significant revenue growth and enhanced market presence. My ability to navigate complex technical landscapes and translate them into viable business opportunities has been a cornerstone of my professional journey.</p>
 
-    const container = document.getElementById('systemsContainer');
-    systems.forEach(system => {
-      const form = document.createElement('form');
-      form.id = `form_${system}`;
-      form.className = 'system-section';
-      form.innerHTML = `<div class="system-title">System ${system}</div>
-        <div class="input-grid">
-        ${fields.map(([id, label]) => `
-          <div class="input-group">
-            <label for="${id}_${system}">${label}:</label>
-            <input type="number" id="${id}_${system}" step="any" required />
-          </div>`).join('')}
-        </div>
-        <div class="input-group" style="justify-content: center;">
-          <button type="submit">Calculate LCOH - System ${system}</button>
-        </div>
-        <div class="result" id="output_${system}"></div>
-        <canvas id="chart_${system}"></canvas>`;
+    <p style="text-align:justify;">In the realm of green hydrogen and battery technologies, I have been instrumental in developing and implementing strategies that align with the evolving energy landscape. My commitment to sustainability and innovation drives me to stay at the forefront of industry advancements, ensuring that the solutions I bring to the table are both cutting-edge and environmentally responsible.</p>
 
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        calculateLCOH(system);
-      });
+  </section>
 
-      container.appendChild(form);
-    });
+  <section id="experience">
+    <h2>Experience Timeline</h2>
+    <div class="timeline">
+      <div>
+        <h3>BGR Tech Ltd.</h3>
+        <p><strong>Business Development Engineer</strong></p>
+        <ul>
+          <li style="text-align:justify;">Identified and resolved technical challenges in electrochemical cells, electrolyzers, and hydrogen storage systems, enabling efficient and reliable green hydrogen solutions.</li>          
+          <li style="text-align:justify;">Conducted in-depth market research and competitive analysis to uncover emerging trends, assess market potential, and inform strategic direction in the green hydrogen sector.</li>         
+          <li style="text-align:justify;">Generated high-value business opportunities and sales leads through targeted outreach, proposal development, client engagement, and successful negotiation.</li>          
+          <li style="text-align:justify;">Developed and managed budgets, financial forecasts, and viability models to support key business decisions and ensure project-level profitability.</li>         
+          <li style="text-align:justify;">Monitored and analyzed financial performance metrics to evaluate ROI and drive strategic improvements across product and project portfolios.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Associated Electrochemicals Pvt. Ltd.</h3>
+        <p><strong>Technical Sales Engineer</strong></p>
+        <ul>
+          <li style="text-align:justify;">Served as the primary technical liaison for 100+ customers across five states, providing comprehensive product knowledge, technical support, and post-sales engagement</li>
+          <li style="text-align:justify;">Delivered impactful product demonstrations, technical presentations, and training sessions to educate clients on the applications and advantages of PE (polyethylene) separators in various industries.</li>          
+          <li style="text-align:justify;">Developed and executed monthly marketing strategies backed by embedded market research, resulting in improved sales conversions and brand visibility.</li>          
+          <li style="text-align:justify;">Built and maintained a demand-based product database segmented by industrial regions, enabling data-driven supply chain planning and cost optimization.</li>          
+          <li style="text-align:justify;">Collaborated closely with Engineering, R&D, and Marketing teams to align product development with market trends and customer feedback, ensuring relevance and competitiveness in offerings.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    const charts = {};
+  <section id="education">
+    <h2>Education</h2>
+    <p><strong>B.Tech - Chemical and Electrochemical Engineering</strong></p>
+    <p>CSIR-Central Electrochemical Research Institute, Karaikudi, Tamil Nadu</p>
+  </section>
 
-    function calculateLCOH(system) {
-      const values = {};
-      fields.forEach(([id]) => {
-        const val = document.getElementById(`${id}_${system}`).value;
-        values[id] = isNaN(parseFloat(val)) ? 0 : parseFloat(val);
-      });
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Electrochemistry</li>
+      <li>Market Research & Analysis</li>
+      <li>Microsoft Office</li>
+      <li>Stakeholder Management</li>
+      <li>Project Management</li>
+      <li>Product Costing</li>
+      <li>Lead Generation</li>
+      <li>Techno-commerical Operations</li>
+      <li>Costing & Estimation</li>
+    </ul>
+  </section>
 
-      const plantSizeKW = values.plantSize * 1000;
-      const efficiency = values.efficiency > 0 ? values.efficiency / 100 : 0.01;
-      const discountRate = values.discountRate / 100;
-      const annuityFactor = discountRate === 0
-        ? 1 / values.lifetime
-        : (discountRate * Math.pow(1 + discountRate, values.lifetime)) /
-          (Math.pow(1 + discountRate, values.lifetime) - 1);
+  <section id="languages">
+    <h2>Language Proficiency</h2>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 100%;">English - Fluent</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 90%;">Hindi - Fluent</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 75%;">Tamil - Conversational</span></div>
+    <div class="progress-bar"><span class="progress-bar-fill" style="width: 100%;">Malayalam - Native</span></div>
+  </section>
 
-      const totalCapex = values.capexElectrolyzer + values.capexBOP + values.capexCivil + values.capexInstallation;
-      const totalHydrogenProduced = (plantSizeKW * values.fullLoad * efficiency * values.lifetime) / 55.5;
-      const electricityCostPerKg = ((values.electricity / 1000) * (1 / efficiency) * 55.5);
-      const baseCapexPerKg = ((totalCapex * annuityFactor) / totalHydrogenProduced);
-      const opexPerKg = values.opex;
-      const numReplacements = Math.floor(values.lifetime / values.replacementFrequency);
-      const replacementCost = Array.from({ length: numReplacements }, (_, i) => (totalCapex * (values.stackReplacement / 100)) / Math.pow(1 + discountRate, values.replacementFrequency * (i + 1))).reduce((a, b) => a + b, 0);
-      const replacementPerKg = (replacementCost / totalHydrogenProduced);
-      const waterCostPerKg = (values.waterCost * values.waterConsumption / 1000);
-      const compressionPerKg = values.compressionCost;
-      const totalCost = electricityCostPerKg + baseCapexPerKg + opexPerKg + replacementPerKg + waterCostPerKg + compressionPerKg;
-      const totalRevenue = values.o2Revenue + values.co2Price + values.additionalRevenue;
-      const netLCOH = totalCost - totalRevenue;
-      const profit = values.h2Price - netLCOH;
-      const annualH2Output = (plantSizeKW * values.fullLoad * efficiency) / 55.5;
+  <section id="hobbies">
+    <h2>Hobbies & Interests</h2>
+    <ul>
+      <li>Table Tennis, Basketball, Cricket, Snooker</li>
+      <li>Photography & Content Creation</li>
+      <li>Podcasting</li>
+      <li>Stand-up Comedy</li>      
+      <li>Travelling</li>
+      <li>Creative writing</li>
+      <li>Graphic Designing & Web designing</li> 
+    </ul>
+  </section>
 
-      const output = `
-System ${system} - Levelized Cost of Hydrogen (LCOH):
-
-Plant Size: ${values.plantSize} MW
-Annual Hydrogen Output: ${annualH2Output.toFixed(0)} kg/year
-
-Electricity Cost: ${currencySymbol}${electricityCostPerKg.toFixed(2)}
-CAPEX Cost: ${currencySymbol}${baseCapexPerKg.toFixed(2)}
-OPEX Cost: ${currencySymbol}${opexPerKg.toFixed(2)}
-Replacement Cost: ${currencySymbol}${replacementPerKg.toFixed(2)}
-Water Cost: ${currencySymbol}${waterCostPerKg.toFixed(2)}
-Compression Cost: ${currencySymbol}${compressionPerKg.toFixed(2)}
-Revenue Offset: -${currencySymbol}${totalRevenue.toFixed(2)}
-
-Total LCOH: ${currencySymbol}${netLCOH.toFixed(2)} / kg H₂
-Selling Price: ${currencySymbol}${values.h2Price.toFixed(2)} / kg H₂
-Profit: ${currencySymbol}${profit.toFixed(2)} / kg H₂`;
-
-      document.getElementById(`output_${system}`).innerText = output;
-
-      const ctx = document.getElementById(`chart_${system}`).getContext('2d');
-      if (charts[system]) charts[system].destroy();
-      charts[system] = new Chart(ctx, {
-        type: 'pie',
-        data: {
-          labels: ['Electricity', 'CAPEX', 'OPEX', 'Replacement', 'Water', 'Compression', 'Revenue Offset'],
-          datasets: [{
-            label: `System ${system} LCOH Breakdown`,
-            data: [electricityCostPerKg, baseCapexPerKg, opexPerKg, replacementPerKg, waterCostPerKg, compressionPerKg, -totalRevenue],
-            backgroundColor: ['#28a745', '#007bff', '#ffc107', '#17a2b8', '#6f42c1', '#fd7e14', '#dc3545']
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: {
-            legend: { position: 'right' },
-            title: {
-              display: true,
-              text: `LCOH Cost Components - System ${system}`,
-              padding: { top: 10, bottom: 30 }
-            },
-            tooltip: {
-              backgroundColor: 'rgba(0,0,0,0.8)',
-              titleColor: '#fff',
-              bodyColor: '#fff'
-            }
-          }
-        }
-      });
-    }
-  </script>
+  <footer>
+    <p>Download full PDF: <a class="download" href="Ashwin Resume.pdf" download>Click here</a></p>
+    <p>&copy; 2025 Ashwin Praveen</p>
+  </footer>
 </body>
 </html>
