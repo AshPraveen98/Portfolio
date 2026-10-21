@@ -94,12 +94,26 @@ h2::after{flex:none;width:90px;height:3px;background:var(--teal);border-radius:3
 .chips,.edu{justify-content:center}
 .langs{margin:auto}
 @media (max-width:600px){.hero{text-align:center}}
+
+/* Justified body text, left-aligned subtitles */
+h2{flex-direction:row;align-items:center;gap:1rem;text-align:left}
+h2::after{flex:1;width:auto;height:2px;background:linear-gradient(90deg,var(--teal),transparent)}
+#summary p{max-width:none;text-align:justify;hyphens:auto}
+.timeline{max-width:none;padding-left:2rem}
+.timeline::before{left:7px;transform:none}
+.job{padding-top:1.5rem;text-align:left}
+.job::before{left:calc(-2rem + 1px);top:1.9rem;transform:none}
+.job h3,.job .title,.job .dates{text-align:left}
+.job ul{list-style:disc;padding-left:1.2rem}
+.job li{text-align:justify;hyphens:auto}
+.job li+li{padding-top:0;border-top:0}
+.edu{text-align:left}
 </style>
 </head>
 <body>
 <header>
   <div class="hero">
-    <div class="avatar"><img src="profile-pic.png" alt="Ashwin Praveen" onerror="this.remove()"><span class="initials">AP</span></div>
+    <div class="avatar"><img src="profile-pic.jpg" alt="Ashwin Praveen" onerror="this.remove()"><span class="initials">AP</span></div>
     <div class="hero-text">
       <h1>Ashwin Praveen</h1>
       <p class="role">Business Development &amp; Techno-Commercial Professional in Green Hydrogen, BESS and Electrochemistry</p>
