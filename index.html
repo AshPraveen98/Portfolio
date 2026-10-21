@@ -71,12 +71,35 @@ footer{margin-top:5rem;padding:3rem 1.5rem;text-align:center;color:#fff;backgrou
 .download:hover{transform:translateY(-2px)}
 @media (max-width:600px){header{padding:3rem 1rem}.hero{text-align:center}.social{justify-content:center}section{padding-top:3rem}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Centre-aligned layout */
+body{text-align:center}
+.hero{flex-direction:column;gap:1.6rem}
+.hero-text{flex:none;max-width:640px}
+.social{justify-content:center}
+.avatar{width:220px;height:220px;border-radius:50%;border:4px solid var(--mint);box-shadow:0 0 0 10px rgba(127,224,200,.15);overflow:hidden;background:var(--teal);display:grid;place-items:center;font-family:'Bricolage Grotesque',sans-serif;font-size:4rem;color:var(--mint)}
+.avatar{position:relative}
+.initials{position:absolute;inset:0;display:grid;place-items:center}
+.avatar img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border:0;border-radius:0;box-shadow:none;margin:0}
+h2{flex-direction:column;gap:.7rem}
+h2::after{flex:none;width:90px;height:3px;background:var(--teal);border-radius:3px}
+#summary p{max-width:70ch;margin-left:auto;margin-right:auto;text-align:center;hyphens:manual}
+.timeline{padding-left:0;max-width:760px;margin:auto}
+.timeline::before{left:50%;transform:translateX(-50%)}
+.job{padding-top:2.2rem}
+.job::before{left:50%;top:-7px;transform:translateX(-50%)}
+.job ul{list-style:none;padding:0}
+.job li{text-align:center;hyphens:manual}
+.job li+li{padding-top:.6rem;border-top:1px dashed var(--line)}
+.chips,.edu{justify-content:center}
+.langs{margin:auto}
+@media (max-width:600px){.hero{text-align:center}}
 </style>
 </head>
 <body>
 <header>
   <div class="hero">
-    <img src="profile pic.jpg" alt="Ashwin Praveen">
+    <div class="avatar"><img src="profile-pic.png" alt="Ashwin Praveen" onerror="this.remove()"><span class="initials">AP</span></div>
     <div class="hero-text">
       <h1>Ashwin Praveen</h1>
       <p class="role">Business Development &amp; Techno-Commercial Professional in Green Hydrogen, BESS and Electrochemistry</p>
